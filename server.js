@@ -1,16 +1,10 @@
-const express = require('express');
 const socketio = require('socket.io');
 const dotenv = require('dotenv');
 dotenv.config({ path: './config.env' });
-const app = express();
-const cors = require('cors');
-const connectToDB = require('./database');
-app.use(cors());
+const app = require('./app');
 
 const port = process.env.PORT || 9000;
 const expressServer = app.listen(port);
-
-connectToDB();
 
 const io = socketio(expressServer, {
   cors: {
