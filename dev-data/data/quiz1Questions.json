@@ -1,0 +1,32 @@
+[
+  {
+    "question": "Which planet in our solar system has the shortest day?",
+    "options": ["Jupiter", "Mercury", "Neptune", "Earth"],
+    "answer": "Jupiter"
+  },
+  {
+    "question": "Which famous scientist developed the theory of general relativity?",
+    "options": [
+      "Isaac Newton",
+      "Niels Bohr",
+      "Galileo Galilei",
+      "Albert Einstein"
+    ],
+    "answer": "Albert Einstein"
+  },
+  {
+    "question": "What is the largest mammal on Earth?",
+    "options": ["African Elephant", "Blue Whale", "Giraffe", "Humpback Whale"],
+    "answer": "Blue Whale"
+  },
+  {
+    "question": "Which country has the longest coastline in the world?",
+    "options": ["Australia", "Russia", "Canada", "United States"],
+    "answer": "Canada"
+  },
+  {
+    "question": "What is the smallest bone in the human body?",
+    "options": ["Stapes", "Hamate", "Cuboid", "Pisiform"],
+    "answer": "Stapes"
+  }
+]
