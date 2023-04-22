@@ -1,0 +1,32 @@
+[
+  {
+    "question": "How many moons does the planet Mars have?",
+    "min": 0,
+    "max": 20,
+    "answer": 2
+  },
+  {
+    "question": "How many elements are there in the periodic table?",
+    "min": 100,
+    "max": 200,
+    "answer": 118
+  },
+  {
+    "question": "How many bones are there in the human body?",
+    "min": 180,
+    "max": 230,
+    "answer": 206
+  },
+  {
+    "question": "What is the atomic number of gold?",
+    "min": 60,
+    "max": 100,
+    "answer": 79
+  },
+  {
+    "question": "How many keys are there on a standard piano?",
+    "min": 75,
+    "max": 100,
+    "answer": 88
+  }
+]

@@ -21,7 +21,12 @@ io.on('connect', socket => {
     socket.emit('hello', 'You are connected');
   });
 
-  socket.on('quiz1CorrectCount', data => {
+  socket.on('quiz1Answers', data => {
+    // send this to the judge
+    console.log(data);
+  });
+
+  socket.on('quiz2Answers', data => {
     // send this to the judge
     console.log(data);
   });
