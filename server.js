@@ -2,7 +2,6 @@ const socketio = require('socket.io');
 const createBalls = require(__dirname + '/utilities/createBalls');
 
 const dotenv = require('dotenv');
-const { create } = require('./models/quiz1QuestionModel');
 dotenv.config({ path: __dirname + '/config.env' });
 const app = require(__dirname + '/app');
 
