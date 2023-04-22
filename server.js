@@ -1,5 +1,8 @@
 const socketio = require('socket.io');
+const createBalls = require(__dirname + '/utilities/createBalls');
+
 const dotenv = require('dotenv');
+const { create } = require('./models/quiz1QuestionModel');
 dotenv.config({ path: __dirname + '/config.env' });
 const app = require(__dirname + '/app');
 
@@ -27,8 +30,13 @@ io.on('connect', socket => {
   });
 
   socket.on('quiz2Answers', data => {
-    // send this to the judge
     console.log(data);
+  });
+
+  socket.on('requestBalls', () => {
+    console.log('balls requested');
+    const balls = createBalls(10);
+    socket.emit('receiveBalls', balls);
   });
 
   socket.on('dataFromClient', data => {
