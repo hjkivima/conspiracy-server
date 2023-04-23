@@ -23,6 +23,7 @@ io.on('connect', socket => {
   });
 
   socket.on('quiz1Answers', async submittedAnswers => {
+    console.log(submittedAnswers);
     // check how many answers were right
     const correctAnswers = await Question.find({}, { question: 0, options: 0 });
     let correctCount = 0;
