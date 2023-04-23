@@ -22,6 +22,10 @@ io.on('connect', socket => {
     socket.emit('hello', 'You are connected');
   });
 
+  socket.on('username', data => {
+    console.log(data);
+  });
+
   socket.on('quiz1Answers', async submittedAnswers => {
     try {
       console.log(submittedAnswers);
