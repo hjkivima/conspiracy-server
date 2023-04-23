@@ -23,22 +23,29 @@ io.on('connect', socket => {
   });
 
   socket.on('quiz1Answers', async submittedAnswers => {
-    console.log(submittedAnswers);
-    // check how many answers were right
-    const correctAnswers = await Question.find({}, { question: 0, options: 0 });
-    let correctCount = 0;
-    submittedAnswers.forEach(submittedAnswer => {
-      const targetAnswer = correctAnswers.find(
-        correctAnswer =>
-          correctAnswer._id.toString() === submittedAnswer._id.toString()
+    try {
+      console.log(submittedAnswers);
+      // check how many answers were right
+      const correctAnswers = await Question.find(
+        {},
+        { question: 0, options: 0 }
       );
+      let correctCount = 0;
+      submittedAnswers.forEach(submittedAnswer => {
+        const targetAnswer = correctAnswers.find(
+          correctAnswer =>
+            correctAnswer._id.toString() === submittedAnswer._id.toString()
+        );
 
-      if (submittedAnswer.answer === targetAnswer.answer) correctCount++;
-    });
+        if (submittedAnswer.answer === targetAnswer.answer) correctCount++;
+      });
 
-    console.log(correctCount);
+      console.log(correctCount);
 
-    // send this number (together with a user identifier) to the judge
+      // send this number (together with a user identifier) to the judge
+    } catch (err) {
+      console.error(err);
+    }
   });
 
   socket.on('quiz2Answers', submittedAnswers => {
