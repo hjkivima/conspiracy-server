@@ -13,3 +13,17 @@ exports.getAllQuestions = async (req, res) => {
     res.status(500).json({ message: 'Error fetching questions' });
   }
 };
+
+exports.getAllAnswers = async (req, res) => {
+  try {
+    const questions = await Question.find({}, { answer: 0 });
+
+    res.status(200).json({
+      status: 'success',
+      results: questions.length,
+      data: { questions },
+    });
+  } catch (err) {
+    res.status(500).json({ message: 'Error fetching questions' });
+  }
+};

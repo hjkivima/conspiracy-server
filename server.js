@@ -1,10 +1,9 @@
 const socketio = require('socket.io');
 const createBalls = require(__dirname + '/utilities/createBalls');
-
+const Question = require(__dirname + '/models/quiz1QuestionModel.js');
 const dotenv = require('dotenv');
 dotenv.config({ path: __dirname + '/config.env' });
 const app = require(__dirname + '/app');
-
 const port = process.env.PORT || 9000;
 const expressServer = app.listen(port);
 
@@ -23,13 +22,26 @@ io.on('connect', socket => {
     socket.emit('hello', 'You are connected');
   });
 
-  socket.on('quiz1Answers', data => {
-    // send this to the judge
-    console.log(data);
+  socket.on('quiz1Answers', async submittedAnswers => {
+    // check how many answers were right
+    const correctAnswers = await Question.find({}, { question: 0, options: 0 });
+    let correctCount = 0;
+    submittedAnswers.forEach(submittedAnswer => {
+      const targetAnswer = correctAnswers.find(
+        correctAnswer =>
+          correctAnswer._id.toString() === submittedAnswer._id.toString()
+      );
+
+      if (submittedAnswer.answer === targetAnswer.answer) correctCount++;
+    });
+
+    console.log(correctCount);
+
+    // send this number (together with a user identifier) to the judge
   });
 
-  socket.on('quiz2Answers', data => {
-    console.log(data);
+  socket.on('quiz2Answers', submittedAnswers => {
+    console.log(submittedAnswers);
   });
 
   socket.on('requestBalls', () => {
@@ -38,8 +50,8 @@ io.on('connect', socket => {
     socket.emit('receiveBalls', balls);
   });
 
-  socket.on('dataFromClient', data => {
+  socket.on('dataFromClient', clientData => {
     //
-    console.log(data);
+    console.log(clientData);
   });
 });
