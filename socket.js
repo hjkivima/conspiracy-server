@@ -1,5 +1,5 @@
 const socketio = require('socket.io');
-const server = require(__dirname + 'server.js');
+const server = require(__dirname + '/server.js');
 
 const createBalls = require(__dirname + '/utilities/createBalls');
 const Question = require(__dirname + '/models/quiz1QuestionModel.js');
