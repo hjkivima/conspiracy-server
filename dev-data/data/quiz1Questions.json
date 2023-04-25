@@ -5,8 +5,8 @@
     "answer": "Portugal"
   },
   {
-    "question": "Which state has the highest mountain in the continental United States?",
-    "options": ["Montana", "Colorado", "Alaska", "California"],
+    "question": "Which state has the highest mountain in the contiguous United States?",
+    "options": ["Montana", "Colorado", "Idaho", "California"],
     "answer": "California"
   },
   {
