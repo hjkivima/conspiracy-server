@@ -12,6 +12,9 @@ const io = socketio(server, {
   },
 });
 
+const users = [];
+// [{username:"hjk",isJudge:true,room:101}]
+
 io.on('connect', socket => {
   console.log('Connected');
 
@@ -19,8 +22,21 @@ io.on('connect', socket => {
     socket.emit('hello', 'You are connected');
   });
 
-  socket.on('username', data => {
-    console.log(data);
+  socket.on('username', username => {
+    const user = users.find(val => val.username === username);
+    console.log(user);
+    if (user) {
+      socket.emit('isJudge', user.isJudge);
+      return;
+    }
+
+    const isJudge = Math.random() <= 0.5 ? true : false;
+
+    users.push({ username, isJudge });
+
+    socket.emit('isJudge', isJudge);
+    console.log(username);
+    console.log({ username, isJudge });
   });
 
   socket.on('quiz1Answers', async submittedAnswers => {

@@ -1,32 +1,32 @@
 [
   {
-    "question": "How many moons does the planet Mars have?",
-    "min": 0,
-    "max": 20,
-    "answer": 2
-  },
-  {
-    "question": "How many elements are there in the periodic table?",
-    "min": 100,
-    "max": 200,
-    "answer": 118
-  },
-  {
-    "question": "How many bones are there in the human body?",
-    "min": 180,
-    "max": 230,
-    "answer": 206
-  },
-  {
-    "question": "What is the atomic number of gold?",
-    "min": 60,
+    "question": "How many mountains in the Himalayas are over 7000 meters?",
+    "min": 50,
     "max": 100,
-    "answer": 79
+    "answer": 76
   },
   {
-    "question": "How many keys are there on a standard piano?",
-    "min": 75,
-    "max": 100,
-    "answer": 88
+    "question": "What's the minimum wind speed (mph) of a tornado according to the enhanced Fujita scale?",
+    "min": 50,
+    "max": 80,
+    "answer": 65
+  },
+  {
+    "question": "How many cups (US standard) do elephant calves nurse from their mother per day?",
+    "min": 20,
+    "max": 60,
+    "answer": 40
+  },
+  {
+    "question": "How many teams are there in the first four levels of English football?",
+    "min": 70,
+    "max": 110,
+    "answer": 92
+  },
+  {
+    "question": "What is the oldest male medalist in an Winter Olympic Games?",
+    "min": 40,
+    "max": 70,
+    "answer": 58
   }
 ]

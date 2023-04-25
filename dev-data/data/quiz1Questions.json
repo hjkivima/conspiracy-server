@@ -1,32 +1,27 @@
 [
   {
-    "question": "Which planet in our solar system has the shortest day?",
-    "options": ["Jupiter", "Mercury", "Neptune", "Earth"],
-    "answer": "Jupiter"
+    "question": "What country has reported the biggest wave ever surfed?",
+    "options": ["Portugal", "United States", "Indonesia", "Australia"],
+    "answer": "Portugal"
   },
   {
-    "question": "Which famous scientist developed the theory of general relativity?",
-    "options": [
-      "Isaac Newton",
-      "Niels Bohr",
-      "Galileo Galilei",
-      "Albert Einstein"
-    ],
-    "answer": "Albert Einstein"
+    "question": "Which state has the highest mountain in the continental United States?",
+    "options": ["Montana", "Colorado", "Alaska", "California"],
+    "answer": "California"
   },
   {
-    "question": "What is the largest mammal on Earth?",
-    "options": ["African Elephant", "Blue Whale", "Giraffe", "Humpback Whale"],
-    "answer": "Blue Whale"
+    "question": "Which country has the most active volcanoes?",
+    "options": ["Indonesia", "United States", "Japan", "Russia"],
+    "answer": "Indonesia"
   },
   {
-    "question": "Which country has the longest coastline in the world?",
-    "options": ["Australia", "Russia", "Canada", "United States"],
-    "answer": "Canada"
+    "question": "Which of these events are not included in the decathlon?",
+    "options": ["Shot put", "High jump", "Pole vault", "Triple jump"],
+    "answer": "Triple jump"
   },
   {
-    "question": "What is the smallest bone in the human body?",
-    "options": ["Stapes", "Hamate", "Cuboid", "Pisiform"],
-    "answer": "Stapes"
+    "question": "Which country has the most IKEAs per capita?",
+    "options": ["Sweden", "Germany", "Iceland", "Norway"],
+    "answer": "Iceland"
   }
 ]
